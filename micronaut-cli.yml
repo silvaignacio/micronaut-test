@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: cl.dominalo
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [ annotation-api, app-name, data, data-jdbc, gradle, h2, hibernate-jpa, http-client, jdbc-hikari, kotest, kotlin, kotlin-application, logback, netty-server, readme, security-annotations,  shade, yaml ]
