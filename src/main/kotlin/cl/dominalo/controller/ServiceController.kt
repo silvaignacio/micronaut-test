@@ -1,22 +1,24 @@
 package cl.dominalo.controller
 
-import cl.dominalo.domain.Department
-import cl.dominalo.repository.DepartmentRepository
+import cl.dominalo.domain.Service
+import cl.dominalo.repository.ServiceRepository
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Produces
 import javax.inject.Inject
 
-@Controller("/department")
-class DepartmentController {
+@Controller("/service")
+class ServiceController {
+
 
     @Inject
-    private lateinit var repository: DepartmentRepository
+    private lateinit var repository: ServiceRepository
+
 
     @Get("/")
     @Produces(MediaType.APPLICATION_JSON)
-    fun index(): List<Department?>? {
-        return repository.listDepartments()
+    fun index(): List<Service?>? {
+        return repository.listServices()
     }
 }
